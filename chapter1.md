@@ -62,7 +62,6 @@ concave points_worst"worst" or largest mean value for number of concave portions
 symmetry_worst
 fractal_dimension_worst"worst" or largest mean value for "coastline approximation" - 1
 
-
 `@instructions`
 - Instruction 1
 - Instruction 2
