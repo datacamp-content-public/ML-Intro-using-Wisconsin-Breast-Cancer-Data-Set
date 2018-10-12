@@ -13,7 +13,7 @@ xp: 100
 skills: 2
 ```
 
-In this exercise we are going to follow what steps are followed to build a machine learning model. The following steps will be covered:
+In this exercise you will build a machine learning model. The following steps will be covered:
 
 1. Loading the data set
 2. Exploratory Data Analysis to understand the variables and the associated values
@@ -37,21 +37,13 @@ After loading the data, we'll look at the first 5 rows via the command bc.head(n
 ```{python}
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib as mp
 import seaborn as sns
-
-#%matplotlib inline
-from sklearn.datasets import load_breast_cancer
-
-cancer = load_breast_cancer()     
-data = np.c_[cancer.data, cancer.target]
-columns = np.append(cancer.feature_names, ["target"])
-bc=pd.DataFrame(data, columns=columns)
 ```
 
 `@sample_code`
 ```{python}
-bc.head(n=5)
+
 ```
 
 `@solution`
