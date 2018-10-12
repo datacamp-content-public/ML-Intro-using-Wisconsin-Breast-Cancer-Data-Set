@@ -1,6 +1,6 @@
 ---
-title: Test
-description: Test
+title: 'Loading Data'
+description: 'Loading Wisconsin Breast Cancer Data Set'
 ---
 
 ## Loading the data
@@ -25,78 +25,38 @@ In this exercise we are going to follow what steps are followed to build a machi
 
 The dataset that will be used for this exercise is the Wisconsin Breast Cancer Data Set (available through the UW CS ftp server: ftp ftp.cs.wisc.edu cd math-prog/cpo-dataset/machine-learn/WDBC/). 
 
-32 variables are determined on basis of a fine needle aspirate (FNA) of a breast mass. The variables describe characteristics of the cell nuclei present in the image. For each sample, there is an outcome variable (diagnosis), indicating whether the tumor is benign (B) or malignant (M)
-
-This is the list of variables
-
-1-id: ID number
-2-diagnosis: The diagnosis of breast tissues (M = malignant, B = benign)
-3-radius_mean: mean of distances from center to points on the perimeter
-4-texture_mean: standard deviation of gray-scale values
-5-perimeter_mean: mean size of the core tumor
-area_mean
-smoothness_meanmean of local variation in radius lengths
-compactness_meanmean of perimeter^2 / area - 1.0
-concavity_meanmean of severity of concave portions of the contour
-concave points_meanmean for number of concave portions of the contour
-symmetry_mean
-fractal_dimension_meanmean for "coastline approximation" - 1
-radius_sestandard error for the mean of distances from center to points on the perimeter
-texture_sestandard error for standard deviation of gray-scale values
-perimeter_se
-area_se
-smoothness_sestandard error for local variation in radius lengths
-compactness_sestandard error for perimeter^2 / area - 1.0
-concavity_sestandard error for severity of concave portions of the contour
-concave points_sestandard error for number of concave portions of the contour
-symmetry_se
-fractal_dimension_sestandard error for "coastline approximation" - 1
-radius_worst"worst" or largest mean value for mean of distances from center to points on the perimeter
-texture_worst"worst" or largest mean value for standard deviation of gray-scale values
-perimeter_worst
-area_worst
-smoothness_worst"worst" or largest mean value for local variation in radius lengths
-compactness_worst"worst" or largest mean value for perimeter^2 / area - 1.0
-concavity_worst"worst" or largest mean value for severity of concave portions of the contour
-concave points_worst"worst" or largest mean value for number of concave portions of the contour
-symmetry_worst
-fractal_dimension_worst"worst" or largest mean value for "coastline approximation" - 1
+32 variables are determined on basis of a fine needle aspirate (FNA) of a breast mass. The variables describe characteristics of the cell nuclei present in the image. For each sample, there is an outcome variable (diagnosis), indicating whether the tumor is benign (0) or malignant (1)
 
 `@instructions`
-- Instruction 1
-- Instruction 2
-- Instruction 3
+After loading the data, we'll look at the first 5 rows via the command bc.head(n=x)
 
 `@hint`
-- Here is the hint for this setup problem. 
-- It should get students 50% of the way to the correct answer.
-- So don't provide the answer, but don't just reiterate the instructions.
-- Typically one hint per instruction is a sensible amount.
+
 
 `@pre_exercise_code`
 ```{python}
-# Load datasets and packages here.
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+%matplotlib inline
+from sklearn.datasets import load_breast_cancer
+
+cancer = load_breast_cancer()     
+data = np.c_[cancer.data, cancer.target]
+columns = np.append(cancer.feature_names, ["target"])
+bc=pd.DataFrame(data, columns=columns)
 ```
 
 `@sample_code`
 ```{python}
-# Your
-# sample
-# code
-# should
-# be
-# ideally
-# 10 lines or less,
-# with a max
-# of 16 lines.
+bc.head(n=__)
 ```
 
 `@solution`
 ```{python}
-# Answer goes here
-# Make sure to match the comments with your sample code
-# to help students see the differences from solution
-# to given.
+bc.head(n=5)
 ```
 
 `@sct`
