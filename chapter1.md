@@ -36,11 +36,13 @@ After loading the data, we'll look at the first 5 rows via the command bc.head(n
 `@pre_exercise_code`
 ```{python}
 import pandas as pd
-import matplotlib.pyplot as plt
+import numpy as np
 ```
 
 `@sample_code`
 ```{python}
+import matplotlib.pyplot as plt
+
 print(3+4)
 ```
 
