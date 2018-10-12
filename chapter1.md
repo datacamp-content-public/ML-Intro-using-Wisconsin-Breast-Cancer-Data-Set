@@ -52,6 +52,6 @@ print(3+4)
 
 `@sct`
 ```{python}
-7
+Ex().has_equal_value()
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
