@@ -51,7 +51,7 @@ bc=pd.DataFrame(data, columns=columns)
 
 `@sample_code`
 ```{python}
-bc.head(n=__)
+bc.head(n=5)
 ```
 
 `@solution`
