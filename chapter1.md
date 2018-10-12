@@ -47,11 +47,10 @@ print(3+__)
 
 `@solution`
 ```{python}
-print(3+4)
+
 ```
 
 `@sct`
 ```{python}
-Ex().has_equal_value()
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
