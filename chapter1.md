@@ -37,7 +37,7 @@ After loading the data, we'll look at the first 5 rows via the command bc.head(n
 ```{python}
 import pandas as pd
 import numpy as np
-import matplotlib as mp
+import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
