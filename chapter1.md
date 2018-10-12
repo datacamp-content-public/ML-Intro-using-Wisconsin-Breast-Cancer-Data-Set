@@ -41,8 +41,6 @@ import numpy as np
 
 `@sample_code`
 ```{python}
-import matplotlib.pyplot as plt
-
 print(3+__)
 ```
 
