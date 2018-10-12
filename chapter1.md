@@ -43,12 +43,12 @@ import seaborn as sns
 
 `@sample_code`
 ```{python}
-
+print(3+4)
 ```
 
 `@solution`
 ```{python}
-bc.head(n=5)
+print(3+4)
 ```
 
 `@sct`
