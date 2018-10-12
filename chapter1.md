@@ -54,3 +54,41 @@ print(3+__)
 ```{python}
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
+
+---
+
+## Step 2
+
+```yaml
+type: NormalExercise
+key: ffda0a7f5e
+xp: 100
+```
+
+import matplotib in the exercise
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+import matplotlib.pyplot as __
+```
+
+`@solution`
+```{python}
+import matplotlib.pyplot as plt
+```
+
+`@sct`
+```{python}
+import matplotlib.pyplot as plt
+```
