@@ -43,7 +43,7 @@ import numpy as np
 ```{python}
 import matplotlib.pyplot as plt
 
-print(3+4)
+print(3+__)
 ```
 
 `@solution`
