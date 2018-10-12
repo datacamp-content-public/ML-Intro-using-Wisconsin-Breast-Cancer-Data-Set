@@ -37,7 +37,7 @@ After loading the data, we'll look at the first 5 rows via the command bc.head(n
 ```{python}
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
@@ -53,6 +53,6 @@ print(3+4)
 
 `@sct`
 ```{python}
-# Update this to something more informative.
+7
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
