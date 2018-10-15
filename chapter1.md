@@ -39,20 +39,51 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split 
+from sklearn.model_selection import KFold, cross_val_score 
+from sklearn.ensemble import RandomForestClassifier 
+from sklearn.metrics import roc_curve
+from sklearn.metrics import auc
+from urllib.request import urlopen
+
+plt.style.use('ggplot')
+
+UCI_data_URL = 'https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data'
+
+names = ['id_number', 'diagnosis', 'radius_mean', 
+         'texture_mean', 'perimeter_mean', 'area_mean', 
+         'smoothness_mean', 'compactness_mean', 'concavity_mean',
+         'concave_points_mean', 'symmetry_mean', 
+         'fractal_dimension_mean', 'radius_se', 'texture_se', 
+         'perimeter_se', 'area_se', 'smoothness_se', 
+         'compactness_se', 'concavity_se', 'concave_points_se', 
+         'symmetry_se', 'fractal_dimension_se', 
+         'radius_worst', 'texture_worst', 'perimeter_worst',
+         'area_worst', 'smoothness_worst', 
+         'compactness_worst', 'concavity_worst', 
+         'concave_points_worst', 'symmetry_worst', 
+         'fractal_dimension_worst'] 
+
+breast_cancer = pd.read_csv(urlopen(UCI_data_URL), names=names)
+
+# Convert diagnosis to binary 
+breast_cancer['diagnosis'] = breast_cancer['diagnosis']\
+  .map({'M':1, 'B':0})
 ```
 
 `@sample_code`
 ```{python}
-print(3+__)
+breast_cancer.___
 ```
 
 `@solution`
 ```{python}
-
+breast_cancer.head(n=5)
 ```
 
 `@sct`
 ```{python}
+Ex().has_equal_output()
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
 
