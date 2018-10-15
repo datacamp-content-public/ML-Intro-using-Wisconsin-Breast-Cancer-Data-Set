@@ -28,7 +28,7 @@ The dataset that will be used for this exercise is the Wisconsin Breast Cancer D
 32 variables are determined on basis of a fine needle aspirate (FNA) of a breast mass. The variables describe characteristics of the cell nuclei present in the image. For each sample, there is an outcome variable (diagnosis), indicating whether the tumor is benign (0) or malignant (1)
 
 `@instructions`
-After loading the data, we'll look at the first 5 rows via the command ```bc.head(n=x)```
+Data is loaded into a dataframe `breast_cancer` . Check the first 5 rows of data via the command `dataframe.head(n=5)` . Don't forget to replace the `dataframe` tag with the actual name.
 
 `@hint`
 
