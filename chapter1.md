@@ -73,11 +73,25 @@ breast_cancer['diagnosis'] = breast_cancer['diagnosis']\
 
 `@sample_code`
 ```{python}
+#read Wisconsin breast cancer data set
+breast_cancer = pd.read_csv(urlopen(UCI_data_URL), names=names)
+
+# Convert diagnosis to binary : M=1, B=0
+breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
+
+# Display first 5 rows of the dataframe
 breast_cancer.___
 ```
 
 `@solution`
 ```{python}
+#read Wisconsin breast cancer data set
+breast_cancer = pd.read_csv(urlopen(UCI_data_URL), names=names)
+
+# Convert diagnosis to binary : M=1, B=0
+breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
+
+# Display first 5 rows of the dataframe
 breast_cancer.head(n=5)
 ```
 
@@ -85,42 +99,4 @@ breast_cancer.head(n=5)
 ```{python}
 Ex().has_equal_output()
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
-```
-
----
-
-## Step 2
-
-```yaml
-type: NormalExercise
-key: ffda0a7f5e
-xp: 100
-```
-
-import matplotib in the exercise
-
-`@instructions`
-
-
-`@hint`
-
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-import matplotlib.pyplot as __
-```
-
-`@solution`
-```{python}
-import matplotlib.pyplot as plt
-```
-
-`@sct`
-```{python}
-import matplotlib.pyplot as plt
 ```
