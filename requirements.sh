@@ -10,7 +10,7 @@ pip3 install scikit-learn==0.19.2
 pip3 install numpy==1.15.0 
 pip3 install seaborn==0.9.0 
 pip3 install bokeh==0.13.0 
-
+pip3 install urllib
 
 # Include datasets in the image
 
