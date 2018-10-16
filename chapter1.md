@@ -80,7 +80,7 @@ breast_cancer = pd.read_csv(urlopen(UCI_data_URL), names=names)
 breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M':1, 'B':0})
 
 # Display first 5 rows of the dataframe
-breast_cancer.___
+breast_cancer.head()
 ```
 
 `@solution`
