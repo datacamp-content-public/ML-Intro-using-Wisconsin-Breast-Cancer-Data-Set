@@ -36,6 +36,6 @@ breast_cancer.describe()
 
 `@sct`
 ```{python}
-Ex().has_equal_output()
+Ex().has_equal_value()
 success_msg("Good job !")
 ```
