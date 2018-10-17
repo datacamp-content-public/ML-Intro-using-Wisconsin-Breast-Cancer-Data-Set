@@ -44,7 +44,7 @@ from sklearn.model_selection import KFold, cross_val_score
 from sklearn.ensemble import RandomForestClassifier 
 from sklearn.metrics import roc_curve
 from sklearn.metrics import auc
-#from urllib.request import urlopen
+
 
 plt.style.use('ggplot')
 
